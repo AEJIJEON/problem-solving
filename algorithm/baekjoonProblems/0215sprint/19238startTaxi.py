@@ -20,7 +20,7 @@ for _ in range(m):
 dx = [1,-1,0,0]
 dy = [0,0,1,-1]
 
-
+# apply dijkstra algorithm 
 def getDistance(start):
     q = deque()
     
