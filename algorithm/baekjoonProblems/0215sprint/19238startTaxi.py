@@ -20,7 +20,7 @@ for _ in range(m):
 dx = [1,-1,0,0]
 dy = [0,0,1,-1]
 
-# apply dijkstra algorithm 
+# bfs를 이용한 최단거리 구하기
 def getDistance(start):
     q = deque()
     
@@ -28,9 +28,7 @@ def getDistance(start):
     distances = [[INF]*(n+1) for _ in range(n+1)]
     q.append((x,y))
     distances[x][y] = 0
-    
-
-    
+   
     while q:
         x, y = q.popleft()
         for i in range(4):
