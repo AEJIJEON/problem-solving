@@ -16,10 +16,8 @@ def union_parent(parent, a, b):
 v, e = 6, 4
 # union 연산
 lst = [(1, 4), (2, 3), (2, 4), (5, 6)]
-parent = [0] * (v + 1)
 # 부모를 자기 자신으로 초기화
-for i in range(1, v + 1):
-    parent[i] = i
+parent = [i for i in range(v + 1)]
 for a, b in lst:
     union_parent(parent, a, b)
 # 여기서 parent 출력해보면 경로 압축 적용 안된 node 존재함

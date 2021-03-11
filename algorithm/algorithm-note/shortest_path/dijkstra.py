@@ -1,4 +1,4 @@
-# O(ElogV)
+# O(ElogV) shortest paths from v1 to all nodes
 import heapq
 
 INF = int(1e9)
@@ -19,6 +19,8 @@ def dijkstara(start):
     distance[start] = 0
     while q:
         dist, now = heapq.heappop(q)
+        # 같다고 놓으면 안 됨
+        # distance가 a로 바뀌고 heap에 넣어주었고, 그 후에 이 node에 접근하지 않다가 heap에서 pop되면 distance가 a임
         if dist > distance[now]:
             continue
         for i in graph[now]:

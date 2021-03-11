@@ -29,14 +29,14 @@ edge_input = [
     (5, 6, 53),
     (6, 7, 25),
 ]
-parent = [0] * (v + 1)
-for i in range(1, v + 1):
-    parent[i] = i
+parent = [i for i in range(v + 1)]
 
 edges = []
 for a, b, cost in edge_input:
-    # 비용순으로 정렬 -> 튜플의 첫 번째 원소를 비용으로 설정
+    # 비용순으로 정렬 -> 튜플의 첫 번째 원소를 비용으로 설정 중요!
     edges.append((cost, a, b))
+
+# 가장 시간이 오래 걸리는 부분(간선 정렬하는 작업)
 edges.sort()
 result = 0
 for edge in edges:

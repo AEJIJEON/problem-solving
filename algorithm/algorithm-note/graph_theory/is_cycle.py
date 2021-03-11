@@ -1,4 +1,4 @@
-# undirected graph에서만 적용!!
+# undirected graph에서만 적용!!!!!!!!!!!!!!!!!!!!!
 
 
 def find_parent(parent, x):
@@ -18,9 +18,7 @@ def union_parent(parent, a, b):
 
 v, e = 3, 3
 edges = [(1, 2), (1, 3), (2, 3)]
-parent = [0] * (v + 1)
-for i in range(1, v + 1):
-    parent[i] = i
+parent = [i for i in range(v + 1)]
 
 cycle = False
 

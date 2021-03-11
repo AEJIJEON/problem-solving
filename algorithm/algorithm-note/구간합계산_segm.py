@@ -1,6 +1,6 @@
+# O(N*K) -> O((M+K)*logN) 줄일 수 있음
 # 리프 노드 개수 N -> h = ceil(log2(N)), 전체 노드 개수 = 2 ** (h + 1) (tree 배열은 index 0 제외하고 index 1부터 시작)
 # 입력받은 array는 index 0부터 시작(주의!)
-import sys
 from math import *
 
 
@@ -15,7 +15,7 @@ def init(node, start, end):
 
 
 def update(node, i, diff, start, end):
-    if not (start <= i and i <= end):
+    if not (start <= i <= end):
         return
     tree[node] += diff
     if start == end:

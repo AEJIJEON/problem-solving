@@ -1,4 +1,4 @@
-# O(n^3)
+# O(n^3) shortest paths from all nodes to all nodes
 INF = int(1e9)
 n, m = 4, 7
 # a -> b weight: c about (a, b, c)

@@ -1,4 +1,7 @@
 # O(V+E) 노드와 간선을 모두 확인
+# queue 사용!!!
+# 당연히 acyclic graph이겠죠오오오오옹~?
+
 from collections import deque
 
 v, e = 7, 8
@@ -13,6 +16,7 @@ for a, b in edges:
 def topology_sort():
     queue = deque()
 
+    # queue initialization
     for i in range(1, v + 1):
         if indegree[i] == 0:
             queue.append(i)
