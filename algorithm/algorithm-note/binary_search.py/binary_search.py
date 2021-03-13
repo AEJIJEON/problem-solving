@@ -12,4 +12,4 @@ def binary_search(array, target, start, end):
 
 
 array = [1, 3, 5, 6, 7, 8]
-print(binary_search(array, 6, 0, 6))
+print(binary_search(array, 6, 0, 5))
