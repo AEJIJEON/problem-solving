@@ -11,15 +11,11 @@ data = [
     [100, 50],
     [150, 30],
 ]
-xs = []
-ys = []
+xs = sorted(list(set([x[0] for x in data])))
+ys = sorted(list(set([x[1] for x in data])))
 
-for i in range(len(data)):
-    xs.append(data[i][0])
-    ys.append(data[i][1])
-
-xs = {value: i for i, value in enumerate(sorted(list(set(xs))))}
-ys = {value: i for i, value in enumerate(sorted(list(set(ys))))}
+xs = {value: i for i, value in enumerate(xs)}
+ys = {value: i for i, value in enumerate(ys)}
 
 # O(n)!!
 # x,y좌표 압축
